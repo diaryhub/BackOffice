@@ -39,10 +39,13 @@ export default function BannerPage() {
     setSelected(banner)
   }
 
+  const toIso = (dt: string) => dt ? new Date(dt).toISOString() : dt
+
   const handleSubmit = async () => {
     if (!form.name.trim() || !form.startTime || !form.endTime) return
-    if (mode === 'create') await createBanner(form)
-    else if (mode === 'edit' && selected) await updateBanner(selected.id, form)
+    const payload = { ...form, startTime: toIso(form.startTime), endTime: toIso(form.endTime) }
+    if (mode === 'create') await createBanner(payload)
+    else if (mode === 'edit' && selected) await updateBanner(selected.id, payload)
     setMode(null)
     load()
   }

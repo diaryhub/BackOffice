@@ -11,7 +11,7 @@ FROM gradle:8.14-jdk17 AS backend-build
 WORKDIR /app
 COPY build.gradle.kts settings.gradle.kts ./
 COPY src/ src/
-COPY --from=frontend-build /app/frontend/dist src/main/resources/static
+COPY --from=frontend-build /app/src/main/resources/static src/main/resources/static
 RUN gradle bootJar --no-daemon
 
 # 3단계: 실행

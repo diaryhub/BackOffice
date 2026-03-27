@@ -1,7 +1,8 @@
 import axios from 'axios'
 
+const isDev = import.meta.env.DEV
 const client = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE ?? 'http://localhost:8081',
+  baseURL: isDev ? (import.meta.env.VITE_API_BASE ?? 'http://localhost:8081') : '',
 })
 
 client.interceptors.request.use(config => {

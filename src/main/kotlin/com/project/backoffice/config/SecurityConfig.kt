@@ -22,6 +22,7 @@ class SecurityConfig(private val jwtFilter: JwtFilter) {
             .authorizeHttpRequests {
                 it.requestMatchers("/api/auth/**").permitAll()
                 it.requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger").permitAll()
+                it.requestMatchers("/", "/index.html", "/assets/**", "/*.js", "/*.css").permitAll()
                 it.anyRequest().authenticated()
             }
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)

@@ -4,6 +4,7 @@ const menus = [
   { path: '/notices', label: '공지사항' },
   { path: '/users', label: '유저 관리' },
   { path: '/banners', label: '배너 관리' },
+  { path: '/versions', label: '버전 관리' },
 ]
 
 export default function Sidebar() {

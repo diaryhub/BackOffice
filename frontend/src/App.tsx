@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage'
 import NoticePage from './pages/NoticePage'
 import UserPage from './pages/UserPage'
 import BannerPage from './pages/BannerPage'
+import VersionPage from './pages/VersionPage'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
                     <Route path="/notices" element={<NoticePage />} />
                     <Route path="/users" element={<UserPage />} />
                     <Route path="/banners" element={<BannerPage />} />
+                    <Route path="/versions" element={<VersionPage />} />
                   </Routes>
                 </main>
               </div>

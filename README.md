@@ -11,7 +11,7 @@
 
 | 항목 | 주소 |
 |------|------|
-| 관리자 대시보드 | http://demolauncher.duckdns.org:8081 |
+| 관리자 대시보드 | http://demolauncher.duckdns.org:8081 테스트 계정  (admin / admin) |
 | Swagger UI | http://demolauncher.duckdns.org:8081/swagger |
 
 ---
